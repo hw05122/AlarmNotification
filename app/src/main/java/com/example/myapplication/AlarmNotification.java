@@ -21,7 +21,6 @@ public class AlarmNotification extends BroadcastReceiver {
         PendingIntent pendingI = PendingIntent.getActivity(context, 0,
                 notificationIntent, 0);
 
-
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "default");
 
 
@@ -49,7 +48,7 @@ public class AlarmNotification extends BroadcastReceiver {
                 .setContentTitle("상태바에 보이는 타이틀")
                 .setContentText("상태바에 보이는 서브타이틀")
                 .setContentInfo("INFO")
-                .setContentIntent(pendingI);
+                .setContentIntent(pendingI);// 알림 클릭 시 설정한 Activity로 이동
 
         if (notificationManager != null) {
             // 노티피케이션 동작시킴
